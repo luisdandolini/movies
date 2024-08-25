@@ -1,0 +1,39 @@
+.sidebarContainer {
+  position: fixed;
+  top: 8.125rem;
+  left: 0;
+  width: 20vw;
+  height: calc(100vh - 5.125rem);
+  padding: 0rem 1.5rem;
+  background-color: var(--sidebar-background-color);
+}
+
+@media (max-width: 768px) {
+  .sidebarContainer {
+    display: none;
+  }
+}
+
+.styledLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.styledLinkActive {
+  color: var(--color-link-nav-access);
+}
+
+.styledLinkInactive {
+  color: var(--color-link-nav);
+}
+
+.styledLink:hover {
+  color: var(--hover-link-color);
+}
+
+.containerButtonTheme {
+  color: var(--color-link-nav);
+}

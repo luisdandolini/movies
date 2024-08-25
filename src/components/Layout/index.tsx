@@ -8,6 +8,8 @@ import { Sidebar } from "../Sidebar";
 import { Container, Content } from "./styles";
 import { useThemeStore } from "@/store/useThemeStore";
 import { lightTheme } from "@/styles/themes/light";
+import { Sidebar2 } from "../Sidebar2/Sidebar2";
+import { Header2 } from "../Header2/Header2";
 
 export default function ClientRootLayout({
   children,
@@ -20,9 +22,11 @@ export default function ClientRootLayout({
     <>
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
-        <Header />
+        {/* <Header /> */}
+        <Header2 />
         <Container>
-          <Sidebar />
+          {/* <Sidebar /> */}
+          <Sidebar2 />
           <Content>{children}</Content>
         </Container>
       </ThemeProvider>
