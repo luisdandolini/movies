@@ -1,3 +1,3 @@
 export interface DropdownMenuProps {
-  isOpen: boolean;
+  $isOpen: boolean;
 }

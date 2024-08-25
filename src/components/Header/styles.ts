@@ -70,8 +70,8 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
     }
   }
 
-  ${({ isOpen }) =>
-    isOpen &&
+  ${({ $isOpen }) =>
+    $isOpen &&
     `
       opacity: 1;
       transform: translateY(0);

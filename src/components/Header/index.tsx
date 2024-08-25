@@ -31,7 +31,7 @@ export function Header() {
         />
       </MobileMenuIcon>
 
-      <DropdownMenu isOpen={isMenuOpen}>
+      <DropdownMenu $isOpen={isMenuOpen}>
         <ul>
           <li>home</li>
           <li>filmes</li>
