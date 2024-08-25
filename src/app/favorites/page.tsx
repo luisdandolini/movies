@@ -38,8 +38,6 @@ const GET_FAVORITES_BY_IDS = gql`
 export default function FavoritesPage() {
   const { favorites } = useFavoritesStore();
 
-  console.log("favorites", favorites);
-
   const { loading, error, data } = useQuery(GET_FAVORITES_BY_IDS, {
     variables: { ids: favorites.length ? favorites : [""] },
     skip: favorites.length === 0,

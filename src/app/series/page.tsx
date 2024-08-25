@@ -27,12 +27,13 @@ const GET_SERIES = gql`
 export default function MoviesPage() {
   const { loading, error, data } = useQuery(GET_SERIES);
 
-  if (loading)
+  if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
         <CircularProgress />
       </div>
     );
+  }
 
   if (error) return <p>Error: {error.message}</p>;
 
