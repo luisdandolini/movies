@@ -50,8 +50,6 @@ export default function Home() {
   const movies = data?.movies?.nodes;
   const tvshows = data?.tvshows?.nodes;
 
-  console.log(movies);
-
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-7 mt-7">Filmes</h2>
