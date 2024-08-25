@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ButtonTheme } from "../ButtonTheme";
+import Image from "next/image";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -19,7 +20,9 @@ export function Sidebar() {
         <Links>
           <Link href="/" passHref>
             <StyledLink isActive={pathname === "/"}>
-              <img
+              <Image
+                width={16}
+                height={16}
                 src={pathname === "/" ? "/in_home.svg" : "/home.svg"}
                 alt="Home"
               />
@@ -28,7 +31,9 @@ export function Sidebar() {
           </Link>
           <Link href="/movies" passHref>
             <StyledLink isActive={pathname === "/movies"}>
-              <img
+              <Image
+                width={16}
+                height={16}
                 src={pathname === "/movies" ? "/in_filmes.svg" : "/filme.svg"}
                 alt="Filmes"
               />
@@ -37,7 +42,9 @@ export function Sidebar() {
           </Link>
           <Link href="/series" passHref>
             <StyledLink isActive={pathname === "/series"}>
-              <img
+              <Image
+                width={16}
+                height={16}
                 src={pathname === "/series" ? "/in_series.svg" : "/series.svg"}
                 alt="Series"
               />

@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ButtonTheme } from "../ButtonTheme";
+import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
@@ -21,17 +22,29 @@ export function Header() {
   return (
     <HeaderContainer>
       <ContainerLogo>
-        <img src="/movie.svg" alt="Logo do Pecege Movies" />
+        <Image
+          width={24}
+          height={24}
+          src="/movie.svg"
+          alt="Logo do Pecege Movies"
+        />
         <h1>MOVIES</h1>
       </ContainerLogo>
       <Link href="/favorites" passHref>
         <ContainerFavorite>
-          <img src="/favorite_accept.svg" alt="Logo de Favoritos" />
+          <Image
+            width={24}
+            height={24}
+            src="/favorite_accept.svg"
+            alt="Logo de Favoritos"
+          />
           <p>Favoritos</p>
         </ContainerFavorite>
       </Link>
       <MobileMenuIcon onClick={toggleMenu}>
-        <img
+        <Image
+          width={24}
+          height={24}
           src={isMenuOpen ? "/close_menu.svg" : "/menu_mobile.svg"}
           alt="Menu"
         />

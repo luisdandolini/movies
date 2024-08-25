@@ -17,12 +17,6 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardImage = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-`;
-
 export const Badge = styled.span`
   position: absolute;
   top: 10px;
