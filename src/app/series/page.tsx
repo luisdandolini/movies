@@ -14,6 +14,7 @@ const GET_SERIES = gql`
           gender
           releaseDate
           title
+          favorite
           img {
             sourceUrl
           }
@@ -42,6 +43,7 @@ export default function MoviesPage() {
         {data.tvshows.nodes.map((tvshow: any) => (
           <Card
             key={tvshow.id}
+            id={tvshow.id}
             title={tvshow.advanced_custom_fields.title}
             releaseDate={tvshow.advanced_custom_fields.releaseDate}
             poster={tvshow.advanced_custom_fields.img.sourceUrl}

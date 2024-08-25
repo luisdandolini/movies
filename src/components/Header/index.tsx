@@ -6,6 +6,7 @@ import {
   MobileMenuIcon,
   DropdownMenu,
 } from "./styles";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,10 +21,12 @@ export function Header() {
         <img src="/movie.svg" alt="Logo do Pecege Movies" />
         <h1>MOVIES</h1>
       </ContainerLogo>
-      <ContainerFavorite>
-        <img src="/favorite_accept.svg" alt="Logo de Favoritos" />
-        <p>Favoritos</p>
-      </ContainerFavorite>
+      <Link href="/favorites" passHref>
+        <ContainerFavorite>
+          <img src="/favorite_accept.svg" alt="Logo de Favoritos" />
+          <p>Favoritos</p>
+        </ContainerFavorite>
+      </Link>
       <MobileMenuIcon onClick={toggleMenu}>
         <img
           src={isMenuOpen ? "/close_menu.svg" : "/menu_mobile.svg"}

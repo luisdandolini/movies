@@ -14,6 +14,7 @@ const GET_MOVIES = gql`
           gender
           releaseDate
           title
+          favorite
           img {
             sourceUrl
           }
@@ -42,6 +43,7 @@ export default function MoviesPage() {
         {data.movies.nodes.map((movie: any) => (
           <Card
             key={movie.id}
+            id={movie.id}
             title={movie.advanced_custom_fields.title}
             releaseDate={movie.advanced_custom_fields.releaseDate}
             poster={movie.advanced_custom_fields.img.sourceUrl}

@@ -34,6 +34,11 @@ export const FavoriteIcon = styled.span`
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const CardInfo = styled.div`

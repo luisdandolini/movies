@@ -1,3 +1,4 @@
+import { useFavoritesStore } from "@/store/useFavoritesStore";
 import {
   CardContainer,
   CardImage,
@@ -5,21 +6,29 @@ import {
   FavoriteIcon,
   CardInfo,
 } from "./styles";
+import { CardProps } from "./types";
 
-interface CardProps {
-  title: string;
-  releaseDate: string;
-  poster: string;
-  genre: string;
-}
+export function Card({ id, title, releaseDate, poster, genre }: CardProps) {
+  const { favorites, addFavorite, removeFavorite } = useFavoritesStore();
+  const isFavorite = favorites.includes(id);
 
-export function Card({ title, releaseDate, poster, genre }: CardProps) {
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      removeFavorite(id);
+    } else {
+      addFavorite(id);
+    }
+  };
+
   return (
     <CardContainer>
       <CardImage src={poster} alt={title} />
       <Badge>{genre?.[1] || "Gênero não informado"}</Badge>
-      <FavoriteIcon>
-        <img src="/favorite_accept.svg" alt="Favorite Icon" />
+      <FavoriteIcon onClick={toggleFavorite}>
+        <img
+          src={isFavorite ? "/favorite_accept.svg" : "/no_favorite.svg"}
+          alt="Favorite Icon"
+        />
       </FavoriteIcon>
       <CardInfo>
         <h3>{title}</h3>
