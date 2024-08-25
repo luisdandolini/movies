@@ -1,6 +1,13 @@
-import { SidebarContainer, NavLinks, Links, StyledLink } from "./styles";
+import {
+  SidebarContainer,
+  NavLinks,
+  Links,
+  StyledLink,
+  ContainerButtonTheme,
+} from "./styles";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ButtonTheme } from "../ButtonTheme";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -37,6 +44,10 @@ export function Sidebar() {
               <span>Series</span>
             </StyledLink>
           </Link>
+          <ContainerButtonTheme>
+            <span>Tema</span>
+            <ButtonTheme />
+          </ContainerButtonTheme>
         </Links>
       </NavLinks>
     </SidebarContainer>

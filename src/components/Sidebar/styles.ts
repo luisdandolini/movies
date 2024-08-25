@@ -49,3 +49,7 @@ export const StyledLink = styled.div<StyledLinkProps>`
     color: ${(props) => props.theme["hover-link-color"]};
   }
 `;
+
+export const ContainerButtonTheme = styled.div`
+  color: ${(props) => props.theme["color-link-nav"]};
+`;

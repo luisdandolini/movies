@@ -73,6 +73,9 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
     li {
       margin: 1rem 0;
       transition: color 0.2s ease-in-out;
+      .active {
+        color: ${(props) => props.theme["color-link-nav-access"]};
+      }
     }
   }
 

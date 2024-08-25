@@ -7,8 +7,11 @@ import {
   DropdownMenu,
 } from "./styles";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ButtonTheme } from "../ButtonTheme";
 
 export function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,10 +39,47 @@ export function Header() {
 
       <DropdownMenu $isOpen={isMenuOpen}>
         <ul>
-          <li>home</li>
-          <li>filmes</li>
-          <li>series</li>
-          <li>Favoritos</li>
+          <li>
+            <Link href="/" passHref>
+              <span
+                onClick={toggleMenu}
+                className={pathname === "/" ? "active" : ""}
+              >
+                Home
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/movies" passHref>
+              <span
+                onClick={toggleMenu}
+                className={pathname === "/movies" ? "active" : ""}
+              >
+                Filmes
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/series" passHref>
+              <span
+                onClick={toggleMenu}
+                className={pathname === "/series" ? "active" : ""}
+              >
+                Séries
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/favorites" passHref>
+              <span
+                onClick={toggleMenu}
+                className={pathname === "/favorites" ? "active" : ""}
+              >
+                Favoritos
+              </span>
+            </Link>
+          </li>
+          <ButtonTheme />
         </ul>
       </DropdownMenu>
     </HeaderContainer>
