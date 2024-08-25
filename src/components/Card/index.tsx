@@ -6,17 +6,24 @@ import {
   CardInfo,
 } from "./styles";
 
-export function Card() {
+interface CardProps {
+  title: string;
+  releaseDate: string;
+  poster: string;
+  genre: string;
+}
+
+export function Card({ title, releaseDate, poster, genre }: CardProps) {
   return (
     <CardContainer>
-      <CardImage src="/example.png" alt="John Wick 4" />
-      <Badge>Ação</Badge>
+      <CardImage src={poster} alt={title} />
+      <Badge>{genre?.[1] || "Gênero não informado"}</Badge>
       <FavoriteIcon>
-        <img src="/favorite_accept.svg" alt="" />
+        <img src="/favorite_accept.svg" alt="Favorite Icon" />
       </FavoriteIcon>
       <CardInfo>
-        <h3>John Wick 4</h3>
-        <p>2023</p>
+        <h3>{title}</h3>
+        <p>{releaseDate}</p>
       </CardInfo>
     </CardContainer>
   );

@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 export const SidebarContainer = styled.aside`
+  position: fixed;
+  top: 8.125rem;
+  left: 0;
   width: 20vw;
+  height: calc(100vh - 5.125rem);
   padding: 0rem 1.5rem;
-  margin-top: 5.125rem;
+  background-color: ${(props) => props.theme["sidebar-background-color"]};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.nav`

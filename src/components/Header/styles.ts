@@ -2,11 +2,17 @@ import styled from "styled-components";
 import { DropdownMenuProps } from "./types";
 
 export const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
   height: 4.125rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 
   @media (max-width: 768px) {
     padding: 0.5rem;

@@ -5,6 +5,12 @@ export const CardContainer = styled.div`
   width: 300px;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const CardImage = styled.img`
