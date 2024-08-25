@@ -39,7 +39,7 @@ export const StyledLink = styled.div<StyledLinkProps>`
   align-items: center;
   gap: 0.5rem;
   color: ${(props) =>
-    props.isActive
+    props.$isActive
       ? props.theme["color-link-nav-access"]
       : props.theme["color-link-nav"]};
   cursor: pointer;

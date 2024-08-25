@@ -1,3 +1,3 @@
 export interface StyledLinkProps {
-  isActive: boolean;
+  $isActive: boolean;
 }

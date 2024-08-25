@@ -23,8 +23,10 @@ export function Header() {
     <HeaderContainer>
       <ContainerLogo>
         <Image
-          width={24}
-          height={24}
+          width="0"
+          height="0"
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
           src="/movie.svg"
           alt="Logo do Pecege Movies"
         />
@@ -33,8 +35,10 @@ export function Header() {
       <Link href="/favorites" passHref>
         <ContainerFavorite>
           <Image
-            width={24}
-            height={24}
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
             src="/favorite_accept.svg"
             alt="Logo de Favoritos"
           />
@@ -43,8 +47,10 @@ export function Header() {
       </Link>
       <MobileMenuIcon onClick={toggleMenu}>
         <Image
-          width={24}
-          height={24}
+          width="0"
+          height="0"
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
           src={isMenuOpen ? "/close_menu.svg" : "/menu_mobile.svg"}
           alt="Menu"
         />

@@ -20,11 +20,11 @@ export function Card({ id, title, releaseDate, poster, genre }: CardProps) {
       <Image
         src={poster}
         alt={title}
-        width={300}
-        height={450}
-        layout="responsive"
-        objectFit="cover"
-        quality={100}
+        width="0"
+        height="0"
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+        priority
       />
       <Badge>{genre?.[1] || "Gênero não informado"}</Badge>
       <FavoriteIcon onClick={toggleFavorite}>

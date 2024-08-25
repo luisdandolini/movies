@@ -1,11 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import ClientRootLayout from "@/components/Layout";
 import ApolloClientProvider from "@/components/ApolloClientProvider";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pecege Movies",
@@ -20,9 +17,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={inter.className}>
+      <body>
         <ApolloClientProvider>
           <ClientRootLayout>{children}</ClientRootLayout>
         </ApolloClientProvider>

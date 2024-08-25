@@ -19,10 +19,12 @@ export function Sidebar() {
       <NavLinks>
         <Links>
           <Link href="/" passHref>
-            <StyledLink isActive={pathname === "/"}>
+            <StyledLink $isActive={pathname === "/"}>
               <Image
-                width={16}
-                height={16}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
                 src={pathname === "/" ? "/in_home.svg" : "/home.svg"}
                 alt="Home"
               />
@@ -30,10 +32,12 @@ export function Sidebar() {
             </StyledLink>
           </Link>
           <Link href="/movies" passHref>
-            <StyledLink isActive={pathname === "/movies"}>
+            <StyledLink $isActive={pathname === "/movies"}>
               <Image
-                width={16}
-                height={16}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
                 src={pathname === "/movies" ? "/in_filmes.svg" : "/filme.svg"}
                 alt="Filmes"
               />
@@ -41,14 +45,16 @@ export function Sidebar() {
             </StyledLink>
           </Link>
           <Link href="/series" passHref>
-            <StyledLink isActive={pathname === "/series"}>
+            <StyledLink $isActive={pathname === "/series"}>
               <Image
-                width={16}
-                height={16}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
                 src={pathname === "/series" ? "/in_series.svg" : "/series.svg"}
                 alt="Series"
               />
-              <span>Series</span>
+              <span>Séries</span>
             </StyledLink>
           </Link>
           <ContainerButtonTheme>
