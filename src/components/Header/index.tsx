@@ -45,7 +45,11 @@ export function Header() {
           <p>Favoritos</p>
         </ContainerFavorite>
       </Link>
-      <MobileMenuIcon onClick={toggleMenu}>
+      <MobileMenuIcon
+        onClick={toggleMenu}
+        aria-expanded={isMenuOpen}
+        aria-controls="menu"
+      >
         <Image
           width="0"
           height="0"
@@ -63,6 +67,7 @@ export function Header() {
               <span
                 onClick={toggleMenu}
                 className={pathname === "/" ? "active" : ""}
+                aria-current={pathname === "/" ? "page" : undefined}
               >
                 Home
               </span>
@@ -73,6 +78,7 @@ export function Header() {
               <span
                 onClick={toggleMenu}
                 className={pathname === "/movies" ? "active" : ""}
+                aria-current={pathname === "/movies" ? "page" : undefined}
               >
                 Filmes
               </span>
@@ -83,6 +89,7 @@ export function Header() {
               <span
                 onClick={toggleMenu}
                 className={pathname === "/series" ? "active" : ""}
+                aria-current={pathname === "/series" ? "page" : undefined}
               >
                 Séries
               </span>
@@ -93,6 +100,7 @@ export function Header() {
               <span
                 onClick={toggleMenu}
                 className={pathname === "/favorites" ? "active" : ""}
+                aria-current={pathname === "/favorites" ? "page" : undefined}
               >
                 Favoritos
               </span>

@@ -39,7 +39,7 @@ export const ContainerFavorite = styled.div`
   }
 `;
 
-export const MobileMenuIcon = styled.div`
+export const MobileMenuIcon = styled.button`
   display: none;
   cursor: pointer;
 

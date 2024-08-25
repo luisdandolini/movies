@@ -30,7 +30,7 @@ export function Card({ id, title, releaseDate, poster, genre }: CardProps) {
       <FavoriteIcon onClick={toggleFavorite}>
         <Image
           src={isFavorite ? "/favorite_accept.svg" : "/no_favorite.svg"}
-          alt="Favorite Icon"
+          alt={isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
           width={24}
           height={24}
         />

@@ -19,7 +19,10 @@ export function Sidebar() {
       <NavLinks>
         <Links>
           <Link href="/" passHref>
-            <StyledLink $isActive={pathname === "/"}>
+            <StyledLink
+              $isActive={pathname === "/"}
+              aria-current={pathname === "/" ? "page" : undefined}
+            >
               <Image
                 width="0"
                 height="0"
@@ -32,7 +35,10 @@ export function Sidebar() {
             </StyledLink>
           </Link>
           <Link href="/movies" passHref>
-            <StyledLink $isActive={pathname === "/movies"}>
+            <StyledLink
+              $isActive={pathname === "/movies"}
+              aria-current={pathname === "/movies" ? "page" : undefined}
+            >
               <Image
                 width="0"
                 height="0"
@@ -45,7 +51,10 @@ export function Sidebar() {
             </StyledLink>
           </Link>
           <Link href="/series" passHref>
-            <StyledLink $isActive={pathname === "/series"}>
+            <StyledLink
+              $isActive={pathname === "/series"}
+              aria-current={pathname === "/series" ? "page" : undefined}
+            >
               <Image
                 width="0"
                 height="0"
@@ -58,8 +67,10 @@ export function Sidebar() {
             </StyledLink>
           </Link>
           <ContainerButtonTheme>
-            <span>Tema</span>
-            <ButtonTheme />
+            <li>
+              <span>Tema</span>
+              <ButtonTheme />
+            </li>
           </ContainerButtonTheme>
         </Links>
       </NavLinks>

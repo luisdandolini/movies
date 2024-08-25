@@ -49,14 +49,18 @@ export default function FavoritesPage() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div
+        className="flex justify-center items-center h-screen"
+        aria-busy="true"
+        aria-live="polite"
+      >
         <CircularProgress />
       </div>
     );
   }
 
   if (error) {
-    return <p>Error: {error.message}</p>;
+    return <div role="alert">Erro: {error.message}</div>;
   }
 
   const allFavorites = [
@@ -65,7 +69,7 @@ export default function FavoritesPage() {
   ];
 
   return (
-    <div className="p-6">
+    <section className="p-6">
       <h2 className="text-2xl font-bold mb-4 mt-7">Meus Favoritos</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
         {allFavorites.map((item: any) => (
@@ -79,6 +83,6 @@ export default function FavoritesPage() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -39,19 +39,25 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div
+        className="flex justify-center items-center h-screen"
+        aria-busy="true"
+        aria-live="polite"
+      >
         <CircularProgress />
       </div>
     );
   }
 
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) {
+    return <div role="alert">Erro: {error.message}</div>;
+  }
 
   const movies = data?.movies?.nodes;
   const tvshows = data?.tvshows?.nodes;
 
   return (
-    <div className="p-6">
+    <section className="p-6">
       <h2 className="text-2xl font-bold mb-4 mt-7">Filmes</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
         {movies.map((item: any) => (
@@ -79,6 +85,6 @@ export default function Home() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
