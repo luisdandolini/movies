@@ -63,7 +63,7 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
   opacity: 0;
   transform: translateY(-10px);
   visibility: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Suavidade na transição */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
 
   ul {
     list-style: none;
@@ -82,6 +82,6 @@ export const DropdownMenu = styled.div<DropdownMenuProps>`
       opacity: 1;
       transform: translateY(0);
       visibility: visible;
-      transition: opacity 0.3s ease, transform 0.3s ease; /* Transição rápida para exibir */
+      transition: opacity 0.3s ease, transform 0.3s ease;
   `}
 `;

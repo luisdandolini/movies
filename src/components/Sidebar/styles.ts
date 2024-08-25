@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledLinkProps } from "./types";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -31,4 +32,20 @@ export const Link = styled.li`
   gap: 0.5rem;
   color: ${(props) => props.theme["color-link-nav"]};
   cursor: pointer;
+`;
+
+export const StyledLink = styled.div<StyledLinkProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: ${(props) =>
+    props.isActive
+      ? props.theme["color-link-nav-access"]
+      : props.theme["color-link-nav"]};
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme["hover-link-color"]};
+  }
 `;

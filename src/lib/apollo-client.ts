@@ -6,10 +6,12 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
+  const token = process.env.NEXT_PUBLIC_GRAPHQL_TOKEN;
+
   return {
     headers: {
       ...headers,
-      Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rld2ViLnBlY2VnZS5jb20iLCJpYXQiOjE3MjQwOTk1NzUsIm5iZiI6MTcyNDA5OTU3NSwiZXhwIjoxODgxODY1OTc1LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.j3u1NGSyjrJoUdgvw-skhB_41r0YAYKV9NzWg0Fv-Q4`,
+      Authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
