@@ -26,7 +26,7 @@ export function Header() {
           width="0"
           height="0"
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "16px", height: "16px" }}
           src="/movie.svg"
           alt="Logo do Pecege Movies"
         />
@@ -38,7 +38,7 @@ export function Header() {
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "16px", height: "16px" }}
             src="/favorite_accept.svg"
             alt="Logo de Favoritos"
           />
@@ -50,7 +50,7 @@ export function Header() {
           width="0"
           height="0"
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "16px", height: "16px" }}
           src={isMenuOpen ? "/close_menu.svg" : "/menu_mobile.svg"}
           alt="Menu"
         />

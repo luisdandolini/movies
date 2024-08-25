@@ -24,7 +24,7 @@ export function Sidebar() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "16px", height: "16px" }}
                 src={pathname === "/" ? "/in_home.svg" : "/home.svg"}
                 alt="Home"
               />
@@ -37,7 +37,7 @@ export function Sidebar() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "16px", height: "16px" }}
                 src={pathname === "/movies" ? "/in_filmes.svg" : "/filme.svg"}
                 alt="Filmes"
               />
@@ -50,7 +50,7 @@ export function Sidebar() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "16px", height: "16px" }}
                 src={pathname === "/series" ? "/in_series.svg" : "/series.svg"}
                 alt="Series"
               />
