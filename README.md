@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎬 Pecege Movies
+Pecege Movies é uma aplicação de catálogo de filmes e séries, onde os usuários podem explorar diversos títulos, adicionar favoritos e alternar entre temas claro e escuro. O projeto foi desenvolvido utilizando Next.js, TailwindCSS, Zustand para o gerenciamento de estado, e Apollo Client para consumir uma API GraphQL.
 
-## Getting Started
+# 📸 Screenshots
 
-First, run the development server:
+![Imagem Pecege Movies](https://uploaddeimagens.com.br/images/004/832/993/original/Captura_de_Tela_2024-08-25_a%CC%80s_22.37.37.png?1724636299)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 🚀 Tecnologias Utilizadas
+- Next.js 14: Framework React para desenvolvimento de aplicações web modernas.
+- TypeScript: Superset do JavaScript que adiciona tipos estáticos.
+- Zustand: Gerenciamento de estado leve e reativo.
+- Apollo Client: Biblioteca para consumir GraphQL.
+- Tailwind CSS: Framework CSS utilitário para criar interfaces de usuário rapidamente.
+- GraphQL: Linguagem de consulta para APIs.
+- Vercel: Plataforma de hospedagem e implementação contínua.
+
+# 📚 Funcionalidades
+- Listagem de filmes e séries.
+- Sistema de favoritos usando Zustand.
+- Tema claro e escuro, com persistência de preferência do usuário.
+- Integração com GraphQL para buscar dados de filmes e séries.
+- Layout responsivo para diferentes tamanhos de tela.
+
+# 🛠️ Instalação e Execução
+npm ou yarn
+Passos para rodar o projeto localmente
+Clone o repositório:
+
+```
+git clone https://github.com/luisdandolini/movies.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navegue até o diretório do projeto:
+```
+cd movies
+Instale as dependências:
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+Copiar código
+npm install ou yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Execute o servidor de desenvolvimento:
 
-## Learn More
+```
+npm run dev ou yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Acesse a aplicação em http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 📂 Estrutura de Pastas
+```
+Copiar código
+├── public/               # Assets estáticos, como imagens e ícones
+├── src/
+│   ├── components/       # Componentes reutilizáveis da aplicação
+│   └── lib/              # Configuração do Apollo Client
+│   ├── store/            # Arquivos Zustand para gerenciamento de estado
+└── README.md             # Documentação do projeto
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+🌐 Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Link da Aplicação: https://movies-amber-seven.vercel.app/
