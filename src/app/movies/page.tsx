@@ -1,7 +1,7 @@
 "use client";
 
 import { gql, useQuery } from "@apollo/client";
-import { Card } from "@/components/Card";
+import { Card } from "@/components/Card/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const GET_MOVIES = gql`

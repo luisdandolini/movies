@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ClientRootLayout from "@/components/Layout";
+import ClientRootLayout from "@/components/Layout/ClientRootLayout";
 import ApolloClientProvider from "@/components/ApolloClientProvider";
 
 const inter = Inter({ subsets: ["latin"] });

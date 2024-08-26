@@ -1,11 +1,11 @@
 import { useState } from "react";
-import styles from "./Header2.module.css";
+import styles from "./Header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ButtonTheme } from "../ButtonTheme";
+import { ButtonTheme } from "../ButtonTheme/ButtonTheme";
 import Image from "next/image";
 
-export function Header2() {
+export function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,8 +18,10 @@ export function Header2() {
       <div className={styles.container}>
         <div className={styles.containerLogo}>
           <Image
-            width={16}
-            height={16}
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: "16px", height: "16px" }}
             src="/movie.svg"
             alt="Logo do Pecege Movies"
           />
@@ -28,8 +30,10 @@ export function Header2() {
         <Link href="/favorites" passHref>
           <div className={styles.containerFavorite}>
             <Image
-              width={16}
-              height={16}
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: "16px", height: "16px" }}
               src="/favorite_accept.svg"
               alt="Favoritos"
             />
@@ -44,8 +48,10 @@ export function Header2() {
         aria-controls="menu"
       >
         <Image
-          width={16}
-          height={16}
+          width="0"
+          height="0"
+          sizes="100vw"
+          style={{ width: "16px", height: "16px" }}
           src={isMenuOpen ? "/close_menu.svg" : "/menu_mobile.svg"}
           alt="Menu"
         />

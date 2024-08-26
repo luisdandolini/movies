@@ -2,7 +2,7 @@
   position: fixed;
   top: 8.125rem;
   left: 0;
-  width: 20vw;
+  width: 15vw;
   height: calc(100vh - 5.125rem);
   padding: 0rem 1.5rem;
   background-color: var(--sidebar-background-color);

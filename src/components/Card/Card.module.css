@@ -1,0 +1,58 @@
+.cardContainer {
+  position: relative;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cardContainer:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 375px) {
+  .cardContainer {
+    width: 100%;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--color-link-nav-access);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.favoriteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.favoriteIcon:hover {
+  transform: scale(1.05);
+}
+
+.cardInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--text-color);
+}
+
+.cardInfo h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cardInfo p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-year-card);
+}

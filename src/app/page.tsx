@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "@/components/Card";
+import { Card } from "@/components/Card/Card";
 import { gql, useQuery } from "@apollo/client";
 import CircularProgress from "@mui/material/CircularProgress";
 

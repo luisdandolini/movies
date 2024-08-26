@@ -1,10 +1,10 @@
-import styles from "./Sidebar2.module.css";
+import styles from "./Sidebar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ButtonTheme } from "../ButtonTheme";
+import { ButtonTheme } from "../ButtonTheme/ButtonTheme";
 import Image from "next/image";
 
-export function Sidebar2() {
+export function Sidebar() {
   const pathname = usePathname();
 
   return (
@@ -23,8 +23,10 @@ export function Sidebar2() {
                 aria-current={pathname === "/" ? "page" : undefined}
               >
                 <Image
-                  width="16"
-                  height="16"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "16px", height: "16px" }}
                   src={pathname === "/" ? "/in_home.svg" : "/home.svg"}
                   alt="Home"
                 />
@@ -43,8 +45,10 @@ export function Sidebar2() {
                 aria-current={pathname === "/movies" ? "page" : undefined}
               >
                 <Image
-                  width="16"
-                  height="16"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "16px", height: "16px" }}
                   src={pathname === "/movies" ? "/in_filmes.svg" : "/filme.svg"}
                   alt="Filmes"
                 />
@@ -63,8 +67,10 @@ export function Sidebar2() {
                 aria-current={pathname === "/series" ? "page" : undefined}
               >
                 <Image
-                  width="16"
-                  height="16"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "16px", height: "16px" }}
                   src={
                     pathname === "/series" ? "/in_series.svg" : "/series.svg"
                   }
